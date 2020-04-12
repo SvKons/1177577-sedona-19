@@ -1,0 +1,145 @@
+.reasons__title {
+  margin-bottom: 5px;
+  padding: 0 30px;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  text-align: center;
+  color: #333333;
+}
+
+.reasons__list {
+  padding: 0;
+}
+
+.reasons__item {
+  list-style: none;
+}
+
+.reasons__title,
+.reasons__recommendation-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.reasons__item-title,
+.reasons__recommendation-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.reasons__number,
+.reasons__description,
+.reasons__recommendation-description {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  color: #333333;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.reasons__recommendation-title,
+.reasons__recommendation-description {
+  text-align: left;
+}
+
+.reasons__wrapper-text {
+  position: relative;
+
+  padding: 33px 40px;
+
+  background-color: #f2f2f2;
+}
+
+.reasons__item:first-child .reasons__wrapper-text,
+.reasons__item:nth-child(2) .reasons__wrapper-text {
+  background-color: #81b3d2;
+}
+
+.reasons__item:first-child .reasons__wrapper-text::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 320px;
+  height: 37px;
+
+  background: url("../img/bg-triangle.svg") 0 0 no-repeat;
+}
+
+.reasons__item:nth-child(n+3) .reasons__wrapper-text::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
+  width: 280px;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.reasons__item:last-child .reasons__wrapper-text::after {
+  display: none;
+}
+
+.reasons__recommendation-item {
+  position: relative;
+
+  padding: 0 20px 0 70px;
+}
+
+.reasons__recommendation-title--home::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 37px;
+  height: 36px;
+
+  background: url("../img/icon-house.png") no-repeat;
+}
+
+.reasons__recommendation-title--souvenirs::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 32px;
+  height: 38px;
+
+  background: url("../img/icon-gift.png") 0 0 no-repeat;
+}
+
+.reasons__recommendation-title--food::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 40px;
+  height: 35px;
+
+  background: url("../img/icon-burger.png") 0 0 no-repeat;
+}
