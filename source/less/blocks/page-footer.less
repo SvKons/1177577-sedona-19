@@ -14,3 +14,34 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: @tablet-width;
+  }
+  .page-footer {
+    min-width: 768px;
+    margin-bottom: 36px;
+  }
+  .contacts__title {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+    margin: 0;
+  }
+
+  .page-footer__wrapper {
+    width: @desktop-width;
+    margin: 25px 0;
+  }
+}
