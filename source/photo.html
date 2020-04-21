@@ -19,7 +19,7 @@
         <button class="main-nav__toggle main-nav__toggle--close" type="button">Закрыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link">Главная</a></li>
+          <li class="site-list__item"><a href="index.html" class="site-list__link">Главная</a></li>
           <li class="site-list__item"><a href="photo.html" class="site-list__link">Фото и видео</a></li>
           <li class="site-list__item"><a href="form.html" class="site-list__link">Форма отзыва</a></li>
           <li class="site-list__item"><a href="#" class="site-list__link">HTML Academy</a></li>
@@ -35,14 +35,18 @@
           <img class="page-main__sedona-text page-main__sedona-text--inner-page" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
         </div>
 
-      <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
+      <h2 class="visually-hidden">Седона - городок в Аризоне</h2>
       <section class="gallery">
         <h2 class="gallery__title">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</h2>
       	<h2 class="visually-hidden">Галерея</h2>
   			<ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__item-link--sunset" href="#">
-              <img class="gallery__item-pic gallery__item-pic--first-photo" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Пустынные дороги">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@1x.jpg 2x">
+                <img class="gallery__item-pic gallery__item-pic--first-photo" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@1x.jpg 2x" width="280" height="280" alt="Пустынные дороги">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -54,7 +58,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__item-link" href="#">
-              <img class="gallery__item-pic" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@1x.jpg 2x">
+                <img class="gallery__item-pic" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@1x.jpg 2x" width="280" height="280" alt="Местная растительность">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -66,7 +74,11 @@
           </li>
           <li class="gallery__item gallery__item--grey">
             <a class="gallery__item-link" href="#">
-              <img class="gallery__item-pic" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@1x.jpg 2x">
+                <img class="gallery__item-pic" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@1x.jpg 2x" width="280" height="280" alt="Дорога на север">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -78,7 +90,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__item-link" href="#">
-              <img class="gallery__item-pic" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@1x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@1x.jpg 2x">
+                <img class="gallery__item-pic" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@1x.jpg 2x" width="280" height="280" alt="Мост дьявола">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -90,6 +106,18 @@
           </li>
         </ul>
       </section>
+      <section class="video-presentation">
+      <div class="text-wrapper">
+        <h2 class="video-presentation__header">все еще сомневаетесь?</h2>
+        <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной раз!</p>
+      </div>
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@1x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@1x.jpg 2x">
+        <img class="video-presentation__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@1x.jpg 2x" width="321" height="201">
+      </picture>
+    </section>
     </main>
 
     <footer class="page-footer">
@@ -100,19 +128,23 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Вконтакте</a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.7"><path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M11 0l4 1h2l-1 1h2l-2 2c0 6-3 11-10 11H5l-5-2 5-1c-1-1-3-1-3-3h1C2 8 0 7 0 5l2 1C1 5 0 2 1 1l7 4c1-3 1-4 3-5z"/></svg></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фэйсбуке
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="8.7" height="18.9"><path fill="#fff" d="M6 3h3V0H6C3 0 2 2 2 6H0v4h2v9h4v-9h3V6H6V3z"/></svg></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Вконтакте</a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы на Юитубе
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="14"><path fill="#fff" d="M17 0H3C1 0 0 1 0 3v8c0 2 1 3 3 3h14c2 0 3-1 3-3V3c0-2-1-3-3-3zM7 10V4l7 3-7 3z"/></svg></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1"><path d="M14 0h-1L0 1v25l13 8 14-8V1L14 0zm11 12L13 5 2 12V3l11-1 12 1v9zM13 7l12 7-5 2-7-4v1l6 4h-1l-5-3v2l4 2-1 1-3-2v1l2 1-2 1-11-6 11-7zM2 15l11 7v1l-8-5v2l8 4v2l-8-5v1l8 5 9-5v-5l3-2v10l-12 7-11-7V15z"/></svg></a>
       </div>
     </div>
     </footer>

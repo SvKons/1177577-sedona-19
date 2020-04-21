@@ -1,6 +1,6 @@
 .social__list {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 40px;
 
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +9,7 @@
   list-style: none;
 }
 
-.social__link {
+.social__item {
   position: relative;
   margin-right: 6px;
 
@@ -22,56 +22,69 @@
   background-color: #81b3d2;
 }
 
-.social__link--twitter::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-
-  width: 18px;
-  height: 14px;
-
-  background: url("../img/icon-twitter-w.svg") 0 0 no-repeat;
+.social__link--twitter {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
-.social__link--facebook::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-
-  width: 9px;
-  height: 18px;
-
-  background: url("../img/icon-facebook-w.svg") 0 0 no-repeat;
+.social__link--facebook {
+    padding-left: 18px;
+    padding-top: 15px;
+    padding-right: 17px;
 }
 
-.social__link--youtube::before {
-  content: "";
+.social__link--youtube {
+    padding-left: 13px;
+    padding-top: 17px;
+    padding-right: 13px;
+}
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.social__item:hover {
+  background-color: #669ec0;
+}
 
-  width: 20px;
-  height: 14px;
+.social__link:active {
+  background-color: #5496bd;
+}
 
-  background: url("../img/icon-youtube-w.svg") 0 0 no-repeat;
+.social__item a:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .social__list {
     margin-top: 0;
   }
+
+  .social__item:hover {
+    background-color: #669ec0;
+  }
+
+  .social__link:active {
+    background-color: #5496bd;
+  }
+
+  .social__item a:active {
+    opacity: 0.3;
+  }
 }
+
+@media (min-width: @desktop-width) {
+  .social__link:hover {
+    background-color: #669ec0;
+  }
+
+  .social__item:hover {
+    background-color: #669ec0;
+  }
+
+  .social__link:active {
+    background-color: #5496bd;
+  }
+
+  .social__item a:active {
+    opacity: 0.3;
+  }
+}
+
