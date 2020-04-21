@@ -116,7 +116,6 @@
   }
 }
 
-
   .site-list a:hover {
     color: #81b3d2;
   }
@@ -129,7 +128,22 @@
     background-color: #ffffff;
   }
 
+  .site-list__item--current a {
+    color: #766357;
+  }
+
+  .site-list__item--current a:hover {
+    color: #604e43;
+  }
+
+  .site-list__item--current a:active {
+    color: rgba(118, 99, 87, 0.3);
+  }
+
 @media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    font-family: "ptsansbold";
+  }
 
   .site-list li:first-child {
     padding-left: 50px;
