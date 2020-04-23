@@ -1,0 +1,27 @@
+.form-emotions {
+  min-height: 272px;
+}
+
+.form-emotions__text,
+.form-emotions__text::placeholder {
+  .input-black-text();
+  font-family: "ptsans";
+}
+
+.form-emotions__text {
+  background-color: @color-grey-form;
+  border: none;
+  resize: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form-emotions__text {
+    min-width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-emotions__text {
+    min-width: 960px;
+  }
+}

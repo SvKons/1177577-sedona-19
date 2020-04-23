@@ -1,13 +1,12 @@
 .gallery__title {
-  margin-bottom: 40px;
-
-  padding: 0 24px;
-
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
   text-align: center;
   color: #333333;
+
+  margin-bottom: 40px;
+  padding: 0 24px;
 }
 
 .gallery__list {
@@ -52,12 +51,12 @@
 }
 
 .gallery__item-title {
-  margin: 0;
-  margin-top: 10px;
+  font-family: "ptsansbold";
   font-size: 14px;
   line-height: 24px;
-  font-weight: bold;
   text-align: left;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .gallery__item-author {
@@ -95,4 +94,98 @@
 
   background: url("../img/icon-like.svg") 0 0 no-repeat;
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__title {
+  padding: 0 140px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  .gallery__item {
+    margin-bottom: 0;
+
+    padding: 0 0;
+
+    background-color: #f2f2f2;
+  }
+
+  .gallery__item-pic {
+    display: block;
+    width: 324px;
+    height: 267px;
+
+    &--first-photo {
+      width: 648px;
+      height: 400px;
+    }
+  }
+
+  .gallery__wrapper-text-counts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+  }
+
+  .gallery__wrapper-text {
+    max-width: 210px;
+  }
+
+  .gallery__wrapper-text h3,
+  .gallery__wrapper-text p {
+    margin: 0;
+  }
+
+  .gallery__wrapper-text h3 {
+    font-family: "ptsansbold";
+  }
+
+  .gallery__item::before,
+  .gallery__item::after {
+    display: none;
+  }
+  .gallery__item-likes {
+    margin-top: 10px;
+    padding-left: 30px;
+  }
+  .gallery__item--grey {
+    background-color: #eaeaea;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__title {
+    padding: 0 380px;
+  }
+
+  .gallery__list {
+    padding: 0 0;
+  }
+
+  .gallery__item-pic {
+    width: 400px;
+
+    &--first-photo {
+      width: 1200px;
+    }
+  }
+
+  .gallery__wrapper-text-counts {
+    position: relative;
+    margin-top: -92px;
+
+    color: #ffffff;
+
+    .gallery__item-author {
+      color: #ffffff;
+    }
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }

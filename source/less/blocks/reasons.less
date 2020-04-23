@@ -13,23 +13,24 @@
   padding: 0;
 }
 
-.reasons__item {
+.reasons__item,
+.reasons__points {
   list-style: none;
+  padding: 0;
 }
 
 .reasons__title,
 .reasons__recommendation-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-
-  list-style: none;
 }
 
 .reasons__item-title,
 .reasons__recommendation-title {
+  font-family: "ptsansbold";
   font-size: 18px;
   line-height: 26px;
-  font-weight: bold;
   text-align: center;
 
   &--white {
@@ -51,6 +52,23 @@
   }
 }
 
+.reasons__description {
+  padding: 0 15px;
+}
+
+.reasons__item-image {
+  width: 320px;
+  height: 260px;
+}
+
+.reasons__item-image--city {
+  background-image: url("../img/main-city-mobile@1x.jpg");
+}
+
+.reasons__item-image--bridge {
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
+}
+
 .reasons__recommendation-title,
 .reasons__recommendation-description {
   text-align: left;
@@ -59,7 +77,7 @@
 .reasons__wrapper-text {
   position: relative;
 
-  padding: 33px 40px;
+  padding: 33px 20px;
 
   background-color: #f2f2f2;
 }
@@ -82,7 +100,7 @@
   background: url("../img/bg-triangle.svg") 0 0 no-repeat;
 }
 
-.reasons__item:nth-child(n+3) .reasons__wrapper-text::after {
+.reasons__points-item:first-child .reasons__wrapper-text::after {
   content: "";
 
   position: absolute;
@@ -105,41 +123,255 @@
   padding: 0 20px 0 70px;
 }
 
-.reasons__recommendation-title--home::before {
-  content: "";
+.reasons__title--cause {
+  padding: 0 30px;
+}
 
-  position: absolute;
-  top: 0;
-  left: 0;
-
+.reasons__recommendation-icon--home {
   width: 37px;
   height: 36px;
+  position: absolute;
+  left: 20px;
 
-  background: url("../img/icon-house.png") no-repeat;
+  path,
+  rect {
+    fill: @color-blue;
+  }
 }
 
-.reasons__recommendation-title--souvenirs::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
+.reasons__recommendation-icon--souveniers {
   width: 32px;
   height: 38px;
+  position: absolute;
+  left: 20px;
 
-  background: url("../img/icon-gift.png") 0 0 no-repeat;
+  path,
+   {
+    fill: @color-blue;
+  }
 }
 
-.reasons__recommendation-title--food::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
+.reasons__recommendation-icon--food {
   width: 40px;
   height: 35px;
+  position: absolute;
+  left: 20px;
 
-  background: url("../img/icon-burger.png") 0 0 no-repeat;
+  path,
+  polygon,
+  circle {
+    fill: @color-blue;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .reasons__item:first-child .reasons__wrapper-text::before {
+    content: "";
+    background: none;
+  }
+
+  .reasons__item-title,
+  .reasons__recommendation-title {
+    font-family: "ptsansbold";
+    font-size: 21px;
+    padding: 0 23px;
+  }
+
+  .reasons__title {
+    margin-bottom: 40px;
+  }
+
+  .reasons__recommendation-title,
+  .reasons__recommendation-description {
+    text-align: center;
+    order: 1;
+  }
+
+  .reasons__description--grey {
+    padding: 0 25px;
+  }
+
+  .reasons__recommendation-item--presents {
+    order: 1;
+}
+
+  .reasons__item:first-child .reasons__wrapper-text::before {
+    display: none;
+  }
+
+  .reasons__item:first-child,
+  .reasons__item:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reasons__item:first-child .reasons__wrapper-text,
+  .reasons__item:nth-child(2) .reasons__wrapper-text {
+    box-sizing: border-box;
+    max-width: 256px;
+  }
+
+  .reasons__item:first-child img,
+  .reasons__item:nth-child(2) img {
+    width: 512px;
+    height: 256px;
+  }
+
+  .reasons__item:nth-child(2) img {
+    order: -1;
+  }
+
+  .reasons__recommendation-list {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 330px;
+  }
+
+  .reasons__recommendation-item {
+    max-width: 256px;
+    min-height: 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .reasons__item:nth-child(2) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .reasons__recommendation-icon--home,
+  .reasons__recommendation-icon--souveniers,
+  .reasons__recommendation-icon--food {
+    position: relative;
+    left: 0;
+    margin-bottom: 30px;
+  }
+
+  .reasons__recommendation-icon--home {
+    width: 75px;
+    height: 72px;
+
+    padding-top: 60px;
+    margin: 0;
+  }
+
+  .reasons__recommendation-icon--souveniers {
+    width: 64px;
+    height: 75px;
+
+    padding-top: 58px;
+    margin: 0;
+  }
+
+  .reasons__recommendation-icon--food {
+    width: 77px;
+    height: 68px;
+
+    padding-top: 63px;
+    margin: 0;
+  }
+
+  .reasons__recommendation-title {
+    order: 1;
+
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .reasons__recommendation-description {
+    padding: 20px 35px;
+  }
+
+  .reasons__item-image {
+    width: 512px;
+    height: 256px;
+  }
+
+  .reasons__wrapper-text {
+    padding: 23px 30px;
+  }
+
+  .reasons__item-image--city {
+    background-image: url("../img/main-city-tablet@1x.jpg");
+  }
+  .reasons__item-image--bridge {
+    background-image: url("../img/main-bridge-tablet@1x.jpg");
+  }
+  .reasons__points{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .reasons__points-item {
+    max-width: 256px;
+  }
+  .reasons__item-title--tourists {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    background-color: #f2f2f2;
+  }
+
+  .page {
+    max-width: 1200px;
+    min-width: 768px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
+
+  .reasons__list {
+    width: @desktop-width;
+  }
+  .reasons__item-image {
+    width: 800px;
+    height: 256px;
+  }
+  .reasons__item-image--city {
+    background: url(../img/main-city-desktop@1x.jpg) 0 no-repeat;
+  }
+
+  .reasons__item-image--bridge {
+    background: url(../img/main-bridge-desktop@1x.jpg) 0 no-repeat;
+  }
+
+  .reasons__item:first-child .reasons__wrapper-text, 
+  .reasons__item:nth-child(2) .reasons__wrapper-text {
+    max-width: 400px;
+    height: 256px;
+  }
+
+  .reasons__wrapper-text {
+    padding: 30px 40px;
+  }
+
+  .reasons__item-title {
+    padding: 0 85px;
+  }
+  .reasons__description--brighe {
+    padding: 0 45px;
+  }
+  .reasons__points-item {
+    max-width: 400px;
+  }
+
+  .reasons__recommendation-item {
+    max-width: 400px;
+    max-height: 331px;
+  }
+
+  .reasons__recommendation-description {
+    margin: 0;
+    padding: 20px 55px;
+ }
 }
