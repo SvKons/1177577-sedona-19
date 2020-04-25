@@ -100,18 +100,20 @@
   background: url("../img/bg-triangle.svg") 0 0 no-repeat;
 }
 
-.reasons__points-item:first-child .reasons__wrapper-text::after {
+.reasons__points::after {
   content: "";
 
   position: absolute;
-  bottom: 0;
+  bottom: -1990px;
   left: 20px;
+  right: 20px;
 
-  width: 280px;
+  width: auto;
   height: 1px;
 
   background-color: rgba(0, 0, 0, 0.1);
-}
+} /*Что-то тут не выходит у меня, на странице с Фото все 
+получилось, в чем тут проблема?*/
 
 .reasons__item:last-child .reasons__wrapper-text::after {
   display: none;
@@ -166,7 +168,7 @@
 
 
 @media (min-width: @tablet-width) {
-  .reasons__item:first-child .reasons__wrapper-text::before {
+  .reasons__points::after {
     content: "";
     background: none;
   }
@@ -204,18 +206,13 @@
   .reasons__item:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .reasons__item:first-child .reasons__wrapper-text,
   .reasons__item:nth-child(2) .reasons__wrapper-text {
     box-sizing: border-box;
-    max-width: 256px;
-  }
-
-  .reasons__item:first-child img,
-  .reasons__item:nth-child(2) img {
-    width: 512px;
-    height: 256px;
+    width: 33.33%;
   }
 
   .reasons__item:nth-child(2) img {
@@ -229,7 +226,7 @@
   }
 
   .reasons__recommendation-item {
-    max-width: 256px;
+    width: 33.3%;
     min-height: 252px;
     display: flex;
     flex-direction: column;
@@ -237,6 +234,21 @@
     text-align: center;
     padding: 0;
   }
+
+  .reasons__recommendation-description {
+    padding: 20px 50px;
+  }
+
+  .reasons__recommendation-description--souveniers {
+    padding: 20px 40px;
+  }
+
+  /*Почему у меня здесь не срабаывает?
+  И если делать на first-child и nth-child(2),
+  тоже не работают паддинг отдельно. 
+  .reasons__recommendation-description:last-child {
+  padding: 20px 40px;
+    }*/
 
   .reasons__item:nth-child(2) {
     display: flex;
@@ -283,12 +295,8 @@
     margin-bottom: 0;
   }
 
-  .reasons__recommendation-description {
-    padding: 20px 35px;
-  }
-
   .reasons__item-image {
-    width: 512px;
+    width: 66.66%;
     height: 256px;
   }
 
@@ -309,8 +317,9 @@
   }
 
   .reasons__points-item {
-    max-width: 256px;
+    width: 33.33%;
   }
+
   .reasons__item-title--tourists {
     padding: 0 25px;
   }
