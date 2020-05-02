@@ -61,12 +61,10 @@
   height: 260px;
 }
 
-.reasons__item-image--city {
-  background-image: url("../img/main-city-mobile@1x.jpg");
-}
-
+.reasons__item-image--city,
 .reasons__item-image--bridge {
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
+  display: block;
+  max-width: 100%;
 }
 
 .reasons__recommendation-title,
@@ -82,12 +80,11 @@
   background-color: #f2f2f2;
 }
 
-.reasons__item:first-child .reasons__wrapper-text,
-.reasons__item:nth-child(2) .reasons__wrapper-text {
+.reasons__item--blue .reasons__wrapper-text {
   background-color: #81b3d2;
 }
 
-.reasons__item:first-child .reasons__wrapper-text::before {
+.reasons__item--town .reasons__wrapper-text::before {
   content: "";
 
   position: absolute;
@@ -100,11 +97,10 @@
   background: url("../img/bg-triangle.svg") 0 0 no-repeat;
 }
 
-.reasons__points::after {
+.reasons__points-item--road::before {
   content: "";
 
-  position: absolute;
-  bottom: -1990px;
+  position: relative;
   left: 20px;
   right: 20px;
 
@@ -112,8 +108,20 @@
   height: 1px;
 
   background-color: rgba(0, 0, 0, 0.1);
-} /*Что-то тут не выходит у меня, на странице с Фото все 
-получилось, в чем тут проблема?*/
+}
+
+.reasons__points-item--road::after {
+  content: "";
+
+  position: absolute;
+  left: 20px;
+  right: 20px;
+
+  width: auto;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .reasons__item:last-child .reasons__wrapper-text::after {
   display: none;
@@ -198,25 +206,29 @@
     order: 1;
 }
 
-  .reasons__item:first-child .reasons__wrapper-text::before {
+  .reasons__item--town .reasons__wrapper-text::before {
     display: none;
   }
 
-  .reasons__item:first-child,
-  .reasons__item:nth-child(2) {
+  .reasons__item--town,
+  .reasons__item--bridge {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  .reasons__item:first-child .reasons__wrapper-text,
-  .reasons__item:nth-child(2) .reasons__wrapper-text {
+  .reasons__item--town .reasons__wrapper-text,
+  .reasons__item--bridge .reasons__wrapper-text {
     box-sizing: border-box;
     width: 33.33%;
   }
 
-  .reasons__item:nth-child(2) img {
+  .reasons__item--bridge img {
     order: -1;
+  }
+
+  .reasons__points-item--road::after {
+    display: none;
   }
 
   .reasons__recommendation-list {
@@ -243,14 +255,7 @@
     padding: 20px 40px;
   }
 
-  /*Почему у меня здесь не срабаывает?
-  И если делать на first-child и nth-child(2),
-  тоже не работают паддинг отдельно. 
-  .reasons__recommendation-description:last-child {
-  padding: 20px 40px;
-    }*/
-
-  .reasons__item:nth-child(2) {
+  .reasons__item--bridge {
     display: flex;
     flex-direction: row-reverse;
   }
@@ -296,20 +301,22 @@
   }
 
   .reasons__item-image {
+    position: relative;
     width: 66.66%;
     height: 256px;
+    overflow: hidden;
   }
 
   .reasons__wrapper-text {
     padding: 23px 30px;
   }
 
-  .reasons__item-image--city {
-    background-image: url("../img/main-city-tablet@1x.jpg");
-  }
+  .reasons__item-image--city,
   .reasons__item-image--bridge {
-    background-image: url("../img/main-bridge-tablet@1x.jpg");
+    width: auto;
+    height: auto;
   }
+
   .reasons__points{
     display: flex;
     flex-wrap: wrap;
@@ -346,16 +353,15 @@
     width: 800px;
     height: 256px;
   }
-  .reasons__item-image--city {
-    background: url(../img/main-city-desktop@1x.jpg) 0 no-repeat;
-  }
 
+  .reasons__item-image--city,
   .reasons__item-image--bridge {
-    background: url(../img/main-bridge-desktop@1x.jpg) 0 no-repeat;
+    position: absolute;
+    top: -72px;
   }
 
-  .reasons__item:first-child .reasons__wrapper-text, 
-  .reasons__item:nth-child(2) .reasons__wrapper-text {
+  .reasons__item--town .reasons__wrapper-text, 
+  .reasons__item--bridge .reasons__wrapper-text {
     max-width: 400px;
     height: 256px;
   }
