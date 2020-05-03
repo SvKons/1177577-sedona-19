@@ -76,8 +76,11 @@
   position: relative;
 
   padding: 33px 20px;
+}
 
+.reasons__wrapper-text--grey {
   background-color: #f2f2f2;
+  padding: 33px 20px;
 }
 
 .reasons__item--blue .reasons__wrapper-text {
@@ -186,10 +189,14 @@
     font-family: "ptsansbold";
     font-size: 21px;
     padding: 0 23px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .reasons__title {
-    margin-bottom: 40px;
+    padding-top: 16px;
+    margin-bottom: 50px;
   }
 
   .reasons__recommendation-title,
@@ -200,11 +207,22 @@
 
   .reasons__description--grey {
     padding: 0 25px;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .reasons__description--road {
+    padding: 0 35px;
   }
 
   .reasons__recommendation-item--presents {
     order: 1;
-}
+  }
+
+  .reasons__number--white {
+    margin: 0;
+    margin-bottom: 22px;
+  }
 
   .reasons__item--town .reasons__wrapper-text::before {
     display: none;
@@ -234,7 +252,7 @@
   .reasons__recommendation-list {
     display: flex;
     flex-wrap: wrap;
-    min-height: 330px;
+    min-height: 328px;
   }
 
   .reasons__recommendation-item {
@@ -248,11 +266,13 @@
   }
 
   .reasons__recommendation-description {
-    padding: 20px 50px;
+    padding: 0 50px;
+    margin: 0;
+    margin-top: 12px;
   }
 
   .reasons__recommendation-description--souveniers {
-    padding: 20px 40px;
+    padding: 0 40px;
   }
 
   .reasons__item--bridge {
@@ -297,7 +317,7 @@
 
     box-sizing: border-box;
     padding: 0;
-    margin-bottom: 0;
+    margin-top: 24px;
   }
 
   .reasons__item-image {
@@ -307,8 +327,17 @@
     overflow: hidden;
   }
 
+  .reasons__item-title--grey {
+    margin-top: 22px;
+  }
+
   .reasons__wrapper-text {
     padding: 23px 30px;
+  }
+
+  .reasons__wrapper-text--grey {
+    padding: 23px 20px;
+    padding-bottom: 45px;
   }
 
   .reasons__item-image--city,
@@ -328,7 +357,12 @@
   }
 
   .reasons__item-title--tourists {
-    padding: 0 25px;
+    padding: 0 30px;
+  }
+
+  .reasons__item-image--bridge {
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -354,10 +388,14 @@
     height: 256px;
   }
 
-  .reasons__item-image--city,
+  .reasons__item-image--city {
+    position: absolute;
+    top: -71px;
+  }
+
   .reasons__item-image--bridge {
     position: absolute;
-    top: -72px;
+    top: -76px;
   }
 
   .reasons__item--town .reasons__wrapper-text, 
@@ -370,14 +408,41 @@
     padding: 30px 40px;
   }
 
+  .reasons__wrapper-text--grey {
+    padding: 23px 40px;
+    padding-bottom: 50px;
+ }
+
   .reasons__item-title {
     padding: 0 85px;
+    margin-bottom: 12px;
   }
+
   .reasons__description--brighe {
     padding: 0 45px;
   }
+
+  .reasons__number--white {
+    margin: 0;
+  }
+
+
+   .reasons__number--grey {
+    margin: 0;
+    padding: 0 135px;
+  }
+
   .reasons__points-item {
     max-width: 400px;
+  }
+
+  .reasons__description {
+    letter-spacing: 0.1px;
+    margin-top: 22px;
+  }
+
+  .reasons__description--places {
+    padding: 0;
   }
 
   .reasons__recommendation-item {
@@ -387,6 +452,6 @@
 
   .reasons__recommendation-description {
     margin: 0;
-    padding: 20px 55px;
+    padding: 2px 55px;
  }
 }

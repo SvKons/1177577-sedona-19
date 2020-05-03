@@ -56,11 +56,11 @@
           </p>
           <p class="form-name__field">
             <label class="form-name__lable" for="lastname">Фамилия*:</label>
-            <input class="form-name__input" type="text" name="lastname" id="lastname" placeholder="Иванов" required>
+            <input type="text" name="lastname" id="lastname" placeholder="Иванов" required>
           </p>
           <p class="form-name__field">
             <label class="form-name__lable" for="middlename">Отчество:</label>
-            <input class="form-name__input" type="text" name="middlename" id="middlename" placeholder="Александрович">
+            <input type="text" name="middlename" id="middlename" placeholder="Александрович">
           </p>
         </fieldset>
 
@@ -68,14 +68,14 @@
           <legend class="review-form__legend">Контактная информация:</legend>
           <div class="form-contacts__wrap">
           <p class="form-contacts__field">
-            <label class="form-contacts__lable form-contacts__lable--phone" for="contacts-phone">
+            <label class="form-contacts__label form-contacts__label--phone" for="contacts-phone">
               <span class="feedback__prefix">Контактный</span>
             телефон*:</label>
             <input class="form-contacts__input" type="tel" name="contacts-phone" id="contacts-phone"
               placeholder="Введите телефон" pattern="7 [0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="14" required>
           </p>
           <p class="form-contacts__field">
-            <label class="form-contacts__lable form-contacts__lable--email" for="contacts-email">Электронная почта*:</label>
+            <label class="form-contacts__label form-contacts__label--email" for="contacts-email">Электронная почта*:</label>
             <input class="form-contacts__input" type="email" name="contacts-email" id="contacts-email"
               placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           </p>
@@ -133,15 +133,15 @@
           <div class="review-form__footer-btn">
           <button class="review-form__footer-btn--button" type="submit">Отправить отзыв</button>
         </div>
-          <p class="required-fields">* — обязательные поля</p>
+          <p class="required-fields">*– обязательные поля</p>
         </div>
       </form>
     </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer__form">
     <div class="page-footer__wrapper page-footer__wrapper--form">
-  		<div class="page-footer__contacts contacts">
+  		<div class="page-footer__contacts page-footer__contacts--form contacts">
         <b class="contacts__title">#VISITSEDONA</b>
       </div>
       <div class="page-footer__social social">
@@ -162,7 +162,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <a class="button__copyright copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
         <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1"><path d="M14 0h-1L0 1v25l13 8 14-8V1L14 0zm11 12L13 5 2 12V3l11-1 12 1v9zM13 7l12 7-5 2-7-4v1l6 4h-1l-5-3v2l4 2-1 1-3-2v1l2 1-2 1-11-6 11-7zM2 15l11 7v1l-8-5v2l8 4v2l-8-5v1l8 5 9-5v-5l3-2v10l-12 7-11-7V15z"/></svg></a>
       </div>
     </div>
