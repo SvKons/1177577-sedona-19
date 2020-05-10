@@ -70,30 +70,26 @@
   color: #333333;
 }
 
-.gallery__item-likes {
-  margin: 0;
-  margin-top: 5px;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: bold;
-  text-align: left;
-  position: relative;
+.photo__item-likes {
+  margin-right: 10px;
+  padding: 0;
 
-  padding-left: 40px;
+  background-color: transparent;
+  border: none;
 }
 
-.gallery__item-likes::before {
-  content: "";
+.photo__item-icon {
+  color: #000000;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 23px;
-  height: 21px;
-
-  background: url("../img/icon-like.svg") 0 0 no-repeat;
   opacity: 0.3;
+}
+
+.gallery__item-number {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
 }
 
 @media (min-width: @tablet-width) {
@@ -157,9 +153,27 @@
     display: none;
   }
   
-  .gallery__item-likes {
-    margin-top: 12px;
-    padding-left: 33px;
+  .photo__item-likes {
+    position: absolute;
+    right: 61px;
+    bottom: 30px;
+
+    margin: 0;
+  }
+
+  .gallery__item-number {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .gallery__item:nth-child(2) .gallery__item-number,
+  .gallery__item:nth-child(4) .gallery__item-number {
+    right: 29px;
+  }
+
+  .gallery__item:nth-child(3) .gallery__item-number {
+    right: 37px;
   }
 
   .gallery__wrapper-text__counts--like {
@@ -168,8 +182,8 @@
   }
 
   .gallery__wrapper-text__counts--road {
-  padding: 16px 39px;
-  padding-left: 20px;
+    padding: 16px 39px;
+    padding-left: 20px;
   }
 
   .gallery__item--grey {
@@ -209,10 +223,14 @@
     }
   }
 
-  .gallery__item-likes {
-    margin-top: 13px;
-    padding-left: 31px;
-    letter-spacing: 0.5px;
+  .photo__item-icon {
+    opacity: 1;
+
+    fill: #ffffff;
+  }
+
+  .gallery__item-number{
+    color: #ffffff;
   }
 
   .gallery__wrapper-text__counts--like {
@@ -223,19 +241,5 @@
   .gallery__wrapper-text__counts--road {
   padding: 16px 39px;
   padding-left: 20px;
-  }
-
-  .gallery__item-likes::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 23px;
-  height: 21px;
-
-  background: url("../img/like-icon.png") 0 0 no-repeat;
-  opacity: 1;
   }
 }

@@ -13,13 +13,6 @@
   <body>
     <div class="page">
   	<header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
-        </picture>
-      </a>
        <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть / Закрыть меню</span></button>
       <div class="main-nav__wrapper">
@@ -31,6 +24,15 @@
         </ul>
       </div>
     </nav>
+    <div class="pade-header__wrapper--logo">
+      <a class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        </picture>
+      </a>
+    </div>
     </header>
 
 		<main class="page-main">
@@ -51,15 +53,15 @@
         <fieldset class="form-name review-form__name feedback__section">
           <legend class="review-form__legend">Представьтесь:</legend>
           <p class="form-name__field">
-            <label class="form-name__lable" for="firstname">Имя*:</label>
-            <input class="form-name__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+            <label class="form-name__label" for="firstname">Имя*:</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Петр" required>
           </p>
           <p class="form-name__field">
-            <label class="form-name__lable" for="lastname">Фамилия*:</label>
+            <label class="form-name__label" for="lastname">Фамилия*:</label>
             <input type="text" name="lastname" id="lastname" placeholder="Иванов" required>
           </p>
           <p class="form-name__field">
-            <label class="form-name__lable" for="middlename">Отчество:</label>
+            <label class="form-name__label" for="middlename">Отчество:</label>
             <input type="text" name="middlename" id="middlename" placeholder="Александрович">
           </p>
         </fieldset>
@@ -148,25 +150,51 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.7"><path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M11 0l4 1h2l-1 1h2l-2 2c0 6-3 11-10 11H5l-5-2 5-1c-1-1-3-1-3-3h1C2 8 0 7 0 5l2 1C1 5 0 2 1 1l7 4c1-3 1-4 3-5z"/></svg></a>
+              <svg class="social__icon social__icon--twitter" width="18" height="14">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg></a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фэйсбуке
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="8.7" height="18.9"><path fill="#fff" d="M6 3h3V0H6C3 0 2 2 2 6H0v4h2v9h4v-9h3V6H6V3z"/></svg></a>
+            <svg class="social__icon social__icon--facebook" width="9" height="18">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg></a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы на Юитубе
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="14"><path fill="#fff" d="M17 0H3C1 0 0 1 0 3v8c0 2 1 3 3 3h14c2 0 3-1 3-3V3c0-2-1-3-3-3zM7 10V4l7 3-7 3z"/></svg></a>
+            <svg class="social__icon social__icon--youtube" width="20" height="14">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                </svg></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="button__copyright copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1"><path d="M14 0h-1L0 1v25l13 8 14-8V1L14 0zm11 12L13 5 2 12V3l11-1 12 1v9zM13 7l12 7-5 2-7-4v1l6 4h-1l-5-3v2l4 2-1 1-3-2v1l2 1-2 1-11-6 11-7zM2 15l11 7v1l-8-5v2l8 4v2l-8-5v1l8 5 9-5v-5l3-2v10l-12 7-11-7V15z"/></svg></a>
+        <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg></a>
       </div>
     </div>
     </footer>
+    <div class="popups-container" id="popups-error">
+    <div class="popups popups--error">
+      <div class="popups__container">
+        <h1 class="popups__header">Что-то пошло не так!</h1>
+        <p class="popups__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <button type="submit" class="button popups__button-ok">OK</button>
+    </div>
+  </div>
+  <div class="popups-container" id="popups-sent">
+    <div class="popups popups--sent">
+      <div class="popups__container">
+        <h1 class="popups__header">Ваш отзыв отправлен!</h1>
+        <p class="popups__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы
+          опубликуем его
+          на сайте.</p>
+      </div>
+      <button type="submit" class="button popups__button-send">Закрыть окно</button>
+    </div>
+  </div>
   <script src="js/script.js"></script>
   </div>
 	</body>

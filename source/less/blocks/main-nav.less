@@ -29,21 +29,33 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  bottom: -40px;
+  position: absolute;
+  top: 16px;
   right: 20px;
+  z-index: 2;
 
   width: 23px;
-  height: 21px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   background: transparent url("../img/icon-menu-blue.svg") 0 0 no-repeat;
 }
 
 .main-nav--opened .main-nav__toggle {
+  position: absolute;
   top: 16px;
   right: 20px;
+  z-index: 2;
 
   width: 23px;
   height: 22px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   background: transparent url("../img/icon-cross-w.svg") 0 0 no-repeat;
 }
@@ -54,7 +66,6 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
-  margin-bottom: 56px;
   box-shadow: inset 0 -7px 7px -8px rgba(0, 0, 0, 0.4);
 }
 
@@ -70,7 +81,27 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
+.main-nav--closed .site-list {
+  display: none;
+}
+
+.main-nav--nojs .site-list {
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--closed .site-list {
+  display: flex;
+  }
+
+  .main-nav--nojs .site-list {
+  display: none;
+  }
+
   .main-nav {
     width: @tablet-width;
     min-height: 56px;

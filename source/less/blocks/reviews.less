@@ -7,7 +7,7 @@
   margin-bottom: 24px;
 }
 
-.form-name__lable {
+.form-name__label {
   font-size: 14px;
   line-height: 26px;
   color: @color-grey;
@@ -24,7 +24,6 @@
 .form-name__field {
   display: flex;
   align-items: center;
-  max-width: 280px;
   min-height: 60px;
 }
 
@@ -45,15 +44,6 @@
   font-size: 14px;
   color: #333333;
   text-transform: uppercase;
-}
-
-.review-form__name input {
-  width: 193px;
-  height: 20px;
-}
-
-input.form-name__input {
-  width: 230px;
 }
 
 .feedback input {
@@ -107,7 +97,7 @@ input.form-name__input {
   content: "";
   position: absolute;
   top: 33px;
-  left: 565px;
+  left: 220px;
   z-index: 2;
 
   display: block;
@@ -172,9 +162,7 @@ input.form-name__input {
 
   margin: 0;
   margin-bottom: 25px;
-  padding: 0;
-  padding-right: 16px;
-  
+  padding: 0;  
 
   border: none;
 
@@ -283,6 +271,10 @@ input.form-name__input {
   opacity: 0.3;
 }
 
+.form-places {
+  padding-left: 10px;
+}
+
 .form-places__list {
   list-style: none;
   margin: 0;
@@ -375,8 +367,8 @@ input.form-name__input {
 
 .review-form__emotions textarea {
   display: block;
-  width: 279px;
-  min-height: 160px;
+  width: 239px;
+  min-height: 132px;
   margin-right: auto;
   margin-left: auto;
   padding: 14px 20px;
@@ -471,7 +463,6 @@ input {
   margin-top: 0;
 }
 
-
 .review-form__footer-btn--button:hover {
   background-color: #669ec0;
 }
@@ -483,6 +474,10 @@ input {
   
 .review-form__footer-btn--button:disabled {
   background-color: #e5e5e5;
+}
+
+.form-name__field input {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -515,7 +510,6 @@ input {
 	}
 
 	.review-form__impression {
-    width: 324px;
     order: 1;
     min-height: 360px;
     max-width: 320px;
@@ -544,7 +538,7 @@ input {
     &::before {
       content: "";
       position: absolute;
-      left: -45px;
+      left: -25px;
       top: 5px;
 
       width: 1px;
@@ -561,15 +555,6 @@ input {
 
     text-align: left;
 	}
-
-.review-form__name input {
-  width: 178px;
-  height: 20px;
-}
-
-input.form-name__input {
-  width: 216px;
-}
 
 	.review-form__contacts {
 		border-top: 1px solid #dbdbdb;
@@ -739,6 +724,36 @@ input.form-name__input {
   .review-form__footer-btn--button:disabled {
     background-color: #e5e5e5;
   }
+
+  .review-form__contacts label::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 550px;
+    z-index: 2;
+
+    display: block;
+    width: 58px;
+    height: 58px;
+
+    background-color: #e6e6e6;
+  }
+
+  .form-contacts__label--phone::before {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 20px;
+  }
+
+  .form-contacts__label--email::before {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 21px;
+  }
+
+  .form-name__field input {
+    width: 100%;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -755,7 +770,6 @@ input.form-name__input {
 	.review-form__impression {
 		width: 480px;
     padding: 0;
-    margin-right: 59px;
 	}
 
 	.review-form__impression label {
@@ -766,15 +780,6 @@ input.form-name__input {
 		width: 480px;
     padding-left: 80px;
 	}
-
-  .review-form__name input {
-    width: 311px;
-    height: 20px;
-  }
-
-  input.form-name__input {
-    width: 348px;
-  }
 
 	.review-form__contacts {
 		margin-bottom: 53px;
@@ -901,6 +906,10 @@ input.form-name__input {
   .required-fields {
     margin: 0;
     margin-bottom: 15px;
+  }
+
+  .form-name__field input {
+    width: 100%;
   }
 
   .review-form__name {

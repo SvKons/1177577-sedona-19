@@ -7,11 +7,15 @@
 
 .page-header__logo {
   position: absolute;
-  bottom: -86px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
+
+.pade-header__wrapper--logo {
+    position: relative;
+    height: 56px;
+  }
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -21,8 +25,12 @@
   }
 
   .page-header__logo {
-    bottom: auto;
-    top: 0;
+    top: -56px;
+  }
+
+  .pade-header__wrapper--logo {
+    position: relative;
+    height: 0px;
   }
 }
 
