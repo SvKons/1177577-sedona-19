@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <div class="page">
@@ -46,6 +46,7 @@
       <section class="feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="review-form feedback__form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="review-form__wrapper">
         <fieldset class="form-name review-form__name feedback__section">
           <legend class="review-form__legend">Представьтесь:</legend>
           <p class="form-name__field">
@@ -56,30 +57,32 @@
             <label class="form-name__label" for="lastname">Фамилия*:</label>
             <input type="text" name="lastname" id="lastname" placeholder="Иванов" required>
           </p>
-          <p class="form-name__field">
+          <p class="form-name__field form-name__field--middlename">
             <label class="form-name__label" for="middlename">Отчество:</label>
             <input type="text" name="middlename" id="middlename" placeholder="Александрович">
           </p>
         </fieldset>
+        </div>
 
         <fieldset class="form-contacts review-form__contacts feedback__section">
           <legend class="review-form__legend">Контактная информация:</legend>
           <div class="form-contacts__wrap">
-          <p class="form-contacts__field">
+          <p class="form-contacts__field form-contacts__field--phone">
             <label class="form-contacts__label form-contacts__label--phone" for="contacts-phone">
               <span class="feedback__prefix">Контактный</span>
             телефон*:</label>
             <input class="form-contacts__input" type="tel" name="contacts-phone" id="contacts-phone"
               placeholder="Введите телефон" pattern="7 [0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="14" required>
           </p>
-          <p class="form-contacts__field">
+          <p class="form-contacts__field form-contacts__field--email">
             <label class="form-contacts__label form-contacts__label--email" for="contacts-email">Электронная почта*:</label>
             <input class="form-contacts__input" type="email" name="contacts-email" id="contacts-email"
               placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           </p>
         </div>
         </fieldset>
-
+        
+        <div class="review-form__wrapper--impressions">
         <fieldset class="form-impression review-form__impression feedback__section">
           <legend class="review-form__legend">Ваше общее впечатление:</legend>
           <ul class="form-impression__list">
@@ -99,6 +102,7 @@
             </li>
           </ul>
         </fieldset>
+        </div>
 
         <fieldset class="form-places review-form__places feedback__section">
           <legend class="review-form__legend">Посещенные достопримечательности:</legend>
@@ -143,7 +147,7 @@
         <b class="contacts__title">#VISITSEDONA</b>
       </div>
       <div class="page-footer__social social">
-        <ul class="social__list">
+        <ul class="social__list social__list--page-form">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере
               <svg class="social__icon social__icon--twitter" width="18" height="14">
@@ -166,8 +170,8 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="button__copyright copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg></a>
+        <a class="button__copyright copyright__link copyright__link--form" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use></svg></a>
       </div>
     </div>
     </footer>
@@ -191,6 +195,8 @@
       <button type="submit" class="button popups__button-send">Закрыть окно</button>
     </div>
   </div>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
   <script src="js/script.js"></script>
   <script>
       document.createElement("picture");

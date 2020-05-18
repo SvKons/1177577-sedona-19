@@ -1,12 +1,16 @@
 .social__list {
-  margin: 0;
-  margin-top: 40px;
-
   display: flex;
   flex-wrap: wrap;
   padding: 0;
 
   list-style: none;
+
+  margin: 0;
+  margin-top: 38px;
+}
+
+.social__list--inner-page {
+  padding-left: 4px;
 }
 
 .social__item {
@@ -27,21 +31,21 @@
 }
 
 .social__link--twitter {
-    padding-left: 15px;
-    padding-top: 18px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 18px;
+  padding-right: 15px;
 }
 
 .social__link--facebook {
-    padding-left: 18px;
-    padding-top: 15px;
-    padding-right: 17px;
+  padding-left: 18px;
+  padding-top: 15px;
+  padding-right: 17px;
 }
 
 .social__link--youtube {
-    padding-left: 13px;
-    padding-top: 17px;
-    padding-right: 13px;
+  padding-left: 13px;
+  padding-top: 17px;
+  padding-right: 13px;
 }
 
 .social__item:hover {
@@ -59,7 +63,11 @@
 @media (min-width: @tablet-width) {
   .social__list {
     margin-top: 0;
-    padding-top: 2px;
+    padding-right: 4px;
+  }
+
+  .social__list--inner-page {
+    padding-right: 8px;
   }
 
   .social__item:hover {
@@ -73,9 +81,21 @@
   .social__item a:active {
     opacity: 0.3;
   }
+
+  .social__list--page-form {
+    margin-top: 3px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .social__list-form {
+    padding-right: 25px;
+  }
+
+  .social__list {
+    padding-right: 33px;
+  }
+
   .social__link:hover {
     background-color: #669ec0;
   }

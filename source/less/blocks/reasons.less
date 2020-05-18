@@ -35,6 +35,8 @@
 
   &--white {
     color: #ffffff;
+    margin: 0;
+    margin-top: 40px;
   }
 }
 
@@ -49,11 +51,10 @@
 
   &--white {
     color: #ffffff;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 16px;
   }
-}
-
-.reasons__description {
-  padding: 0 15px;
 }
 
 .reasons__item-image {
@@ -65,22 +66,44 @@
 .reasons__item-image--bridge {
   display: block;
   max-width: 100%;
+  height: 259px;
 }
 
-.reasons__recommendation-title,
+.reasons__recommendation-title {
+  text-align: left;
+  margin: 0;
+}
+
+.reasons__recommendation-title--home {
+  margin-top: 35px;
+}
+
+.reasons__recommendation-title--presents {
+  margin-top: 28px;
+}
+
+.reasons__recommendation-title--food {
+  margin-top: 28px;
+}
+
 .reasons__recommendation-description {
   text-align: left;
+  margin: 0;
+  margin-top: 15px;
 }
 
 .reasons__wrapper-text {
+  height: 100%;
   position: relative;
 
-  padding: 33px 20px;
+  padding: 25px 20px;
+
 }
 
 .reasons__wrapper-text--grey {
+  height: 100%;
   background-color: #f2f2f2;
-  padding: 33px 20px;
+  padding: 13px 20px;
 }
 
 .reasons__item--blue .reasons__wrapper-text {
@@ -91,7 +114,7 @@
   content: "";
 
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
 
   width: 320px;
@@ -138,45 +161,85 @@
 
 .reasons__title--cause {
   padding: 0 30px;
+  padding-top: 15px;
 }
 
 .reasons__recommendation-icon--home {
+  position: absolute;
+  top: -7px;
+  left: 22px;
   width: 37px;
   height: 36px;
-  position: absolute;
-  left: 20px;
-
-  path,
-  rect {
-    fill: @color-blue;
-  }
+  background-image: url(../img/icon-house.svg);
+  background-size: 37px auto;
+  background-repeat: no-repeat;
 }
 
 .reasons__recommendation-icon--souveniers {
+  position: absolute;
+  top: -11px;
+  left: 25px;
   width: 32px;
   height: 38px;
-  position: absolute;
-  left: 20px;
-
-  path,
-   {
-    fill: @color-blue;
-  }
+  background-image: url(../img/icon-gift.svg);
+  background-size: 32px auto;
+  background-repeat: no-repeat;
 }
 
 .reasons__recommendation-icon--food {
-  width: 40px;
-  height: 35px;
   position: absolute;
+  top: 0;
   left: 20px;
-
-  path,
-  polygon,
-  circle {
-    fill: @color-blue;
-  }
+  width: 37px;
+  height: 36px;
+  background-image: url(../img/icon-burger.svg);
+  background-size: 37px auto;
+  background-repeat: no-repeat;
 }
 
+.reasons__recommendation-description--souveniers br {
+  display: none;
+}
+
+.reasons__recommendation-wrapper {
+  padding-bottom: 37px;
+}
+
+.reasons__item-title--bridge {
+  margin-top: 15px;
+}
+
+.reasons__number--bridge {
+  margin-top: 8px;
+}
+
+.reasons__item-title--grey {
+  margin-top: 13px;
+  margin-bottom: 9px;
+}
+
+.reasons__number--grey {
+  margin: 0;
+}
+
+.reasons__item-title--road {
+  margin-top: 15px;
+  margin-bottom: 9px;
+}
+
+.reasons__description--road {
+  padding: 0 15px;
+  margin-top: 16px;
+}
+
+.reasons__item-title--tourists {
+  padding: 0 17px;
+  margin-top: 16px;
+}
+
+.reasons__description--tourists {
+  padding: 0 15px;
+}
 
 @media (min-width: @tablet-width) {
   .reasons__points::after {
@@ -190,7 +253,7 @@
     font-size: 21px;
     padding: 0 23px;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
   }
 
@@ -208,7 +271,7 @@
   .reasons__description--grey {
     padding: 0 25px;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 21px;
   }
 
   .reasons__description--road {
@@ -239,6 +302,7 @@
   .reasons__item--bridge .reasons__wrapper-text {
     box-sizing: border-box;
     width: 33.33%;
+    min-height: 256px;
   }
 
   .reasons__item--bridge img {
@@ -252,12 +316,11 @@
   .reasons__recommendation-list {
     display: flex;
     flex-wrap: wrap;
-    min-height: 328px;
   }
 
   .reasons__recommendation-item {
     width: 33.3%;
-    min-height: 252px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,11 +331,11 @@
   .reasons__recommendation-description {
     padding: 0 50px;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 13px;
   }
 
   .reasons__recommendation-description--souveniers {
-    padding: 0 40px;
+    padding: 0 37px;
   }
 
   .reasons__item--bridge {
@@ -280,36 +343,33 @@
     flex-direction: row-reverse;
   }
 
-  .reasons__recommendation-icon--home,
-  .reasons__recommendation-icon--souveniers,
-  .reasons__recommendation-icon--food {
-    position: relative;
-    left: 0;
-    margin-bottom: 30px;
+  .reasons__recommendation-wrapper {
+    padding-top: 135px;
+    padding-bottom: 61px;
   }
 
   .reasons__recommendation-icon--home {
+    top: -78px;
+    left: 90px;
     width: 75px;
     height: 72px;
-
-    padding-top: 60px;
-    margin: 0;
+    background-size: 75px auto;
   }
 
   .reasons__recommendation-icon--souveniers {
-    width: 64px;
-    height: 75px;
-
-    padding-top: 58px;
-    margin: 0;
+    top: -81px;
+    left: 94px;
+    width: 110px;
+    height: 120px;
+    background-size: 65px auto;
   }
 
   .reasons__recommendation-icon--food {
-    width: 77px;
-    height: 68px;
-
-    padding-top: 63px;
-    margin: 0;
+    top: -74px;
+    left: 89px;
+    width: 110px;
+    height: 120px;
+    background-size: 76px auto;
   }
 
   .reasons__recommendation-title {
@@ -317,7 +377,7 @@
 
     box-sizing: border-box;
     padding: 0;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .reasons__item-image {
@@ -328,16 +388,16 @@
   }
 
   .reasons__item-title--grey {
-    margin-top: 22px;
+    margin-top: 21px;
   }
 
   .reasons__wrapper-text {
-    padding: 23px 30px;
+    padding: 30px 30px;
   }
 
   .reasons__wrapper-text--grey {
     padding: 23px 20px;
-    padding-bottom: 45px;
+    padding-bottom: 30px;
   }
 
   .reasons__item-image--city,
@@ -363,6 +423,20 @@
   .reasons__item-image--bridge {
     position: absolute;
     top: 0;
+  }
+
+  .reasons__number--grey {
+    margin: 0;
+    margin-top: 11px;
+  }
+
+  .reasons__points-item--road::after, 
+  .reasons__points-item--road::before {
+    display: none;
+  }
+
+  .reasons__description--white {
+    padding: 0 15px;
   }
 }
 
@@ -401,11 +475,10 @@
   .reasons__item--town .reasons__wrapper-text, 
   .reasons__item--bridge .reasons__wrapper-text {
     max-width: 400px;
-    height: 256px;
   }
 
   .reasons__wrapper-text {
-    padding: 30px 40px;
+    padding: 45px 40px;
   }
 
   .reasons__wrapper-text--grey {
@@ -415,7 +488,8 @@
 
   .reasons__item-title {
     padding: 0 85px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    margin-top: 7px;
   }
 
   .reasons__description--brighe {
@@ -425,7 +499,6 @@
   .reasons__number--white {
     margin: 0;
   }
-
 
    .reasons__number--grey {
     margin: 0;
@@ -438,7 +511,7 @@
 
   .reasons__description {
     letter-spacing: 0.1px;
-    margin-top: 22px;
+    margin-top: 21px;
   }
 
   .reasons__description--places {
@@ -446,12 +519,51 @@
   }
 
   .reasons__recommendation-item {
-    max-width: 400px;
-    max-height: 331px;
+    height: 100%;
   }
 
   .reasons__recommendation-description {
     margin: 0;
     padding: 2px 55px;
  }
+
+ .reasons__title {
+    padding-top: 15px;
+    margin-bottom: 50px;
+    letter-spacing: 0.1px;
+ }
+
+ .reasons__recommendation-title {
+    margin-top: 22px;
+    margin-bottom: 21px;
+ }
+
+ .reasons__recommendation-list {
+    min-height: 100%;
+    padding-bottom: 19px;
+ }
+
+ .reasons__item-title--grey  {
+    margin-top: 20px;
+ }
+
+ .reasons__description--road {
+    padding: 0 25px;
+ }
+
+  .reasons__recommendation-icon--home {
+    left: 160px;
+  }
+
+  .reasons__recommendation-icon--souveniers {
+    left: 167px;
+  }
+
+  .reasons__recommendation-icon--food {
+    left: 161px;
+  }
+
+  .reasons__recommendation-description br {
+    display: block;
+  }
 }
