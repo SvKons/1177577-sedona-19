@@ -803,12 +803,13 @@ input {
 
   .reviews__title {
     padding: 0 380px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
 	.review-form__impression {
-		width: 480px;
+		max-width: 480px;
     padding: 0;
+    margin: 0;
 	}
 
 	.review-form__impression label {
@@ -820,7 +821,7 @@ input {
 	}
 
 	.review-form__contacts .review-form__legend {
-    padding-top: 5px;
+    padding-top: 2px;
 		margin-bottom: 75px;
 	}
 
@@ -868,7 +869,7 @@ input {
   }
 
   .review-form__name .review-form__legend {
-    margin-left: 38px;
+    margin-left: 80px;
   }
 
   .review-form__name .form-name__field {
@@ -883,7 +884,7 @@ input {
   .review-form__emotions textarea {
   	width: 920px;
     min-height: 127px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     padding: 17px 20px;
   }
 
@@ -894,7 +895,7 @@ input {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     color: #ffffff;
     background-color: #81b3d2;
@@ -961,19 +962,20 @@ input {
   .review-form__name .form-name__field {
     display: flex;
     margin-bottom: 18px;
+    margin-left: 79px;
 }
 
   .review-form__name {
     position: relative;
     margin-bottom: 0;
     max-width: 480px;
-    padding-left: 14px;
-    margin-left: 112px;
+    padding-left: 0px;
+    margin-left: 0px;
 
     &::before {
       content: "";
       position: absolute;
-      left: 63px;
+      left: 0;
       top: 5px;
 
       width: 1px;
@@ -983,13 +985,23 @@ input {
     }
   }
 
-  .form-name {
-    padding: 0;
-    margin: 0;
-    padding-left: 100px;
+  .review-form__impression .review-form__legend {
+    margin-right: 0;
+    margin-left: 80px;
+ }
+
+ .form-name,
+ .form-impression {
+  width: 480px;
+  margin-bottom: 3px;
+ }
+
+ .review-form__impression .form-impression__list-item {
+    margin-bottom: 52px;
+    margin-left: 80px;
   }
 
-  .review-form__name .form-name__field {
-    margin-left: 25px;
+  .form-contacts__field--phone input {
+    padding-left: 17px;
   }
 }
