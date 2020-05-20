@@ -37,13 +37,13 @@
 }
 
 .review-form__name label {
-  margin-top: 0;
-  margin-right: 15px;
-
   font-weight: normal;
   font-size: 14px;
   color: #333333;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-right: 15px;
 }
 
 .feedback input {
@@ -130,11 +130,12 @@
 .form-impression__list {
   list-style: none;
   min-height: 150px;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
 }
 
 .form-impression__lable {
@@ -181,24 +182,23 @@
 
 .review-form__legend {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-
   text-align: center;
   text-transform: uppercase;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .feedback__section input {
+  font-weight: bold;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+
   padding-top: 17px;
   padding-right: 15px;
   padding-bottom: 18px;
   padding-left: 20px;
-
-  font-weight: bold;
-  color: #000000;
-
-  background-color: #f2f2f2;
-  border: none;
 }
 
 .feedback__section input:hover {
@@ -454,6 +454,7 @@ input {
   color: #ffffff;
   background-color: #81b3d2;
   z-index: 1000;  
+
   padding: 0;  
   padding-bottom: 2px;  
   padding-left: 1px;
@@ -535,11 +536,11 @@ input {
 	}
 
 	.review-form__impression .review-form__legend {
-		margin-right: 6px;
+    text-align: left;
+
+    margin-right: 6px;
     margin-bottom: 75px;
     margin-left: 0;
-
-    text-align: left;
 	}
 
 	.review-form__impression .form-impression__list-item {
@@ -567,11 +568,11 @@ input {
 	}
 
 	.review-form__name .review-form__legend {
-		margin-right: 0;
+    text-align: left;
+
+    margin-right: 0;
     margin-bottom: 40px;
     margin-left: 54px;
-
-    text-align: left;
 	}
 
 	.review-form__contacts {
@@ -594,22 +595,26 @@ input {
 
 	.review-form__places {
     border-top: 1px solid #dbdbdb;
+
     margin-bottom: 22px;
 	}
 
 	.review-form__places .review-form__legend {
 		width: 400px;
+
     margin-bottom: 57px;
 	}
 
 	.form-places__list {
 		display: flex;
     flex-wrap: wrap;
+
     padding-left: 95px;
 	}	
 
 	.review-form__places .form-places__list-item {
 		width: 235px;
+
     margin-right: 25px;
     margin-bottom: 62px;
 	}
@@ -620,6 +625,7 @@ input {
 
 	.review-form__emotions .review-form__legend {
 		width: 400px;
+
     margin-bottom: 57px;
 	}
 
@@ -627,6 +633,7 @@ input {
 		width: 610px;
     min-height: 125px;
     letter-spacing: 1.1px;
+
     padding: 17px 20px;
 	}
 
@@ -654,6 +661,7 @@ input {
     order: 2;
     min-height: 360px;
     max-width: 320px;
+
     margin-left: 25px;
     margin-bottom: 8px;
   }
@@ -661,6 +669,7 @@ input {
   .review-form__contacts {
     flex-grow: 1;
     order: 3;
+
     margin-bottom: 27px;
   }
 
@@ -796,6 +805,7 @@ input {
 
   .review-form__places label {
     position: relative;
+
     margin-left: 79px;
   }
 }
@@ -813,6 +823,7 @@ input {
 
 	.review-form__impression {
 		max-width: 480px;
+
     padding: 0;
     margin: 0;
 	}
@@ -832,6 +843,7 @@ input {
 
 	.review-form__contacts .form-contacts__field {
 		width: 480px;
+
     margin: 0;
 	}
 
@@ -870,6 +882,7 @@ input {
 
   .form-places__list {
   	justify-content: space-between;
+
     padding-left: 0;
   }
 
@@ -883,6 +896,7 @@ input {
 
   .review-form__places .form-places__list-item {
   	width: auto;
+
     margin-right: 3px;
   }
 
@@ -890,6 +904,7 @@ input {
   	width: 920px;
     min-height: 127px;
     letter-spacing: 1.1px;
+
     padding: 17px 20px;
   }
 
@@ -966,16 +981,18 @@ input {
 
   .review-form__name .form-name__field {
     display: flex;
+
     margin-bottom: 18px;
     margin-left: 79px;
 }
 
   .review-form__name {
     position: relative;
-    margin-bottom: 0;
     max-width: 480px;
+
     padding-left: 0px;
     margin-left: 0px;
+    margin-bottom: 0;
 
     &::before {
       content: "";
@@ -995,10 +1012,10 @@ input {
     margin-left: 80px;
  }
 
- .form-name,
- .form-impression {
-  width: 480px;
-  margin-bottom: 3px;
+  .form-name,
+  .form-impression {
+    width: 480px;
+    margin-bottom: 3px;
  }
 
  .review-form__impression .form-impression__list-item {
