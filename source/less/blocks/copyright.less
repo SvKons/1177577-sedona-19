@@ -1,7 +1,7 @@
 .copyright {
   display: flex;
   align-items: center;
-   margin: 40px 0 20px 15px;
+  margin: 39px 0 20px 15px;
 }
 
 .copyright__text {
@@ -9,7 +9,7 @@
   line-height: 26px;
   font-weight: normal;
   text-transform: uppercase;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .copyright__link {
@@ -20,11 +20,11 @@
   font-size: 0;
 }
 
-.copyright__link:hover path{
+.copyright__link:hover svg {
   fill: #81b3d2;
 }
 
-.copyright__link:active path{
+.copyright__link:active svg {
   fill: #bdbbbc;
 }
 
@@ -35,15 +35,7 @@
   }
 
   .copyright__text {
-    margin-right: 15px;
-  }
-
-  .copyright__link:hover path{
-    fill: #81b3d2;
-  }
-
-  .copyright__link:active path{
-    fill: #bdbbbc;
+    margin-right: 12px;
   }
 } 
 
@@ -52,11 +44,15 @@
     margin-right: 13px;
   }
 
-  .copyright__link:hover path{
-    fill: #81b3d2;
+  .copyright {
+    padding: 0;
   }
 
-  .copyright__link:active path{
-    fill: #bdbbbc;
+  .copyright__link--inner-page {
+    height: 31px;
+  }
+
+  .copyright__link--form {
+    height: 30px;
   }
 }

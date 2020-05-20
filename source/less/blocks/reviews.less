@@ -1,13 +1,13 @@
 .reviews__title {
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
   font-weight: normal;
   text-align: center;
   color: #333333;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 
-.form-name__lable {
+.form-name__label {
   font-size: 14px;
   line-height: 26px;
   color: @color-grey;
@@ -24,17 +24,16 @@
 .form-name__field {
   display: flex;
   align-items: center;
-  max-width: 280px;
   min-height: 60px;
 }
 
 .review-form__name .review-form__legend {
-  margin-bottom: 21px;
+  margin-bottom: 4px;
 }
 
 .review-form__name .form-name__field {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .review-form__name label {
@@ -45,15 +44,6 @@
   font-size: 14px;
   color: #333333;
   text-transform: uppercase;
-}
-
-.review-form__name input {
-  width: 193px;
-  height: 20px;
-}
-
-input.form-name__input {
-  width: 230px;
 }
 
 .feedback input {
@@ -83,13 +73,13 @@ input.form-name__input {
 }
 
 .review-form__contacts .review-form__legend {
-  margin-bottom: 19px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .review-form__contacts .form-contacts__field {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 12px;
 }
 
 .review-form__contacts label {
@@ -100,14 +90,14 @@ input.form-name__input {
   text-transform: uppercase;
 
   margin-bottom: 7px;
-  padding-left: 22px;
+  padding-left: 4px;
 }
 
 .review-form__contacts label::before {
   content: "";
   position: absolute;
-  top: 33px;
-  left: 565px;
+  top: 34px;
+  left: 202px;
   z-index: 2;
 
   display: block;
@@ -172,17 +162,15 @@ input.form-name__input {
 
   margin: 0;
   margin-bottom: 25px;
-  padding: 0;
-  padding-right: 16px;
-  
+  padding: 0;  
 
   border: none;
 
   &::before {
     content: "";
     position: absolute;
-    top: -13px;
-    left: 0;
+    top: -19px;
+    left: -20px;
 
     width: 320px;
     height: 1px;
@@ -202,7 +190,7 @@ input.form-name__input {
 
 .feedback__section input {
   padding-top: 17px;
-  padding-right: 22px;
+  padding-right: 15px;
   padding-bottom: 18px;
   padding-left: 20px;
 
@@ -242,7 +230,7 @@ input.form-name__input {
 
 .review-form__impression label {
   position: relative;
-  margin-left: 79px;
+  margin-left: 78px;
 }
 
 .review-form__impression label::before {
@@ -283,6 +271,10 @@ input.form-name__input {
   opacity: 0.3;
 }
 
+.form-places {
+  padding-left: 10px;
+}
+
 .form-places__list {
   list-style: none;
   margin: 0;
@@ -305,7 +297,7 @@ input.form-name__input {
 }
 
 .review-form__places .review-form__legend {
-   margin-bottom: 31px;
+   margin-bottom: 33px;
 }
 
 .review-form__places .form-places__list-item {
@@ -315,7 +307,7 @@ input.form-name__input {
 
 .review-form__places label {
   position: relative;
-  margin-left: 79px;
+  margin-left: 68px;
 }
 
 .review-form__places label::before {
@@ -342,7 +334,7 @@ input.form-name__input {
 .checkbox:checked + label::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
-  top: 3px;
+  top: 5px;
   left: -62px;
 
   width: 24px;
@@ -365,28 +357,25 @@ input.form-name__input {
   resize: none;
 }
 
-.review-form__emotions {
-  padding-left: 20px;
-}
-
 .review-form__emotions .review-form__legend {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .review-form__emotions textarea {
   display: block;
-  width: 279px;
-  min-height: 160px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 14px 20px;
-
+  width: 239px;
+  min-height: 132px;
   font-weight: bold;
   line-height: 26px;
+  letter-spacing: 1px;
   color: #000000;
 
   background-color: #f2f2f2;
   border: none;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 20px;
 }
 
 .review-form__emotions textarea::placeholder {
@@ -471,7 +460,6 @@ input {
   margin-top: 0;
 }
 
-
 .review-form__footer-btn--button:hover {
   background-color: #669ec0;
 }
@@ -485,6 +473,27 @@ input {
   background-color: #e5e5e5;
 }
 
+.form-name__field input {
+  width: 100%;
+}
+
+.form-contacts__field--phone {
+  margin: 0;
+}
+
+.form-contacts__field--email {
+  margin-top: 11px;
+  margin-bottom: 21px;
+}
+
+.form-emotions {
+  margin-bottom: 48px;
+}
+
+.review-form__wrapper--impressions {
+  width: 100%;
+}
+
 @media (min-width: @tablet-width) {
 	.feedback__form {
 		display: flex;
@@ -494,6 +503,10 @@ input {
     margin-right: auto;
     margin-left: auto;
 	}
+
+  .review-form__name .form-name__field {
+    margin-left: 53px;
+  }
 
 
 	.feedback__section {
@@ -507,7 +520,7 @@ input {
 
 	.reviews__title {
 		padding: 0 165px;
-		margin-bottom: 70px;
+		margin-bottom: 75px;
 	}
 
 	.review-form__legend {
@@ -515,7 +528,6 @@ input {
 	}
 
 	.review-form__impression {
-    width: 324px;
     order: 1;
     min-height: 360px;
     max-width: 320px;
@@ -523,8 +535,8 @@ input {
 	}
 
 	.review-form__impression .review-form__legend {
-		margin-right: 0;
-    margin-bottom: 74px;
+		margin-right: 6px;
+    margin-bottom: 75px;
     margin-left: 0;
 
     text-align: left;
@@ -544,7 +556,7 @@ input {
     &::before {
       content: "";
       position: absolute;
-      left: -45px;
+      left: -4px;
       top: 5px;
 
       width: 1px;
@@ -557,19 +569,10 @@ input {
 	.review-form__name .review-form__legend {
 		margin-right: 0;
     margin-bottom: 40px;
-    margin-left: 15px;
+    margin-left: 54px;
 
     text-align: left;
 	}
-
-.review-form__name input {
-  width: 178px;
-  height: 20px;
-}
-
-input.form-name__input {
-  width: 216px;
-}
 
 	.review-form__contacts {
 		border-top: 1px solid #dbdbdb;
@@ -578,7 +581,7 @@ input.form-name__input {
 	.review-form__contacts .review-form__legend {
 		width: 400px;
     letter-spacing: 0.2px;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 	}
 
 	.review-form__contacts .form-contacts__field {
@@ -596,7 +599,7 @@ input.form-name__input {
 
 	.review-form__places .review-form__legend {
 		width: 400px;
-    margin-bottom: 56px;
+    margin-bottom: 57px;
 	}
 
 	.form-places__list {
@@ -623,8 +626,8 @@ input.form-name__input {
 	.review-form__emotions textarea {
 		width: 610px;
     min-height: 125px;
-    letter-spacing: 1px;
-    padding: 18px 20px;
+    letter-spacing: 1.1px;
+    padding: 17px 20px;
 	}
 
 	.required-fields {
@@ -658,7 +661,7 @@ input.form-name__input {
   .review-form__contacts {
     flex-grow: 1;
     order: 3;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
   }
 
   .review-form__places {
@@ -724,7 +727,7 @@ input.form-name__input {
     padding: 0;
     padding-bottom: 2px;
     padding-left: 1px;
-    margin-top: 58px;
+    margin-top: 61px;
   }
 
   .review-form__footer-btn--button:hover {
@@ -739,6 +742,62 @@ input.form-name__input {
   .review-form__footer-btn--button:disabled {
     background-color: #e5e5e5;
   }
+
+  .review-form__contacts label::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 568px;
+    z-index: 2;
+
+    display: block;
+    width: 58px;
+    height: 59px;
+
+    background-color: #e6e6e6;
+  }
+
+  .form-contacts__label--phone::before {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 20px;
+  }
+
+  .form-contacts__label--email::before {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 21px;
+  }
+
+  .form-name__field input {
+    width: 100%;
+  }
+
+  .review-form__wrapper--impressions {
+    width: 46%;
+    order: -1;
+  }
+
+  .feedback__section input {
+    padding: 17px 11px 18px 20px;
+  }
+
+  .form-name__field input {
+    font-size: 90%;
+  }
+
+  .review-form__name .form-name__field {
+    margin-bottom: 18px;
+  }
+
+  .review-form__contacts label {
+    padding-left: 0;
+  }
+
+  .review-form__places label {
+    position: relative;
+    margin-left: 79px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -749,39 +808,25 @@ input.form-name__input {
 
   .reviews__title {
     padding: 0 380px;
-    margin-bottom: 56px;
+    margin-bottom: 58px;
   }
 
 	.review-form__impression {
-		width: 480px;
+		max-width: 480px;
     padding: 0;
-    margin-right: 59px;
+    margin: 0;
 	}
 
 	.review-form__impression label {
 		margin: 0;
 	}
 
-	.review-form__name {
-		width: 480px;
-    padding-left: 80px;
-	}
-
-  .review-form__name input {
-    width: 311px;
-    height: 20px;
-  }
-
-  input.form-name__input {
-    width: 348px;
-  }
-
 	.review-form__contacts {
-		margin-bottom: 53px;
+		margin-bottom: 52px;
 	}
 
 	.review-form__contacts .review-form__legend {
-    padding-top: 5px;
+    padding-top: 2px;
 		margin-bottom: 75px;
 	}
 
@@ -828,6 +873,14 @@ input.form-name__input {
     padding-left: 0;
   }
 
+  .review-form__name .review-form__legend {
+    margin-left: 80px;
+  }
+
+  .review-form__name .form-name__field {
+    margin-left: 0;
+  }
+
   .review-form__places .form-places__list-item {
   	width: auto;
     margin-right: 3px;
@@ -836,7 +889,7 @@ input.form-name__input {
   .review-form__emotions textarea {
   	width: 920px;
     min-height: 127px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     padding: 17px 20px;
   }
 
@@ -847,7 +900,7 @@ input.form-name__input {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     color: #ffffff;
     background-color: #81b3d2;
@@ -900,12 +953,29 @@ input.form-name__input {
 
   .required-fields {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
+
+  .form-name__field input {
+    width: 100%;
+  }
+
+  .review-form__wrapper--impressions {
+    order: -1;
+  }
+
+  .review-form__name .form-name__field {
+    display: flex;
+    margin-bottom: 18px;
+    margin-left: 79px;
+}
 
   .review-form__name {
     position: relative;
     margin-bottom: 0;
+    max-width: 480px;
+    padding-left: 0px;
+    margin-left: 0px;
 
     &::before {
       content: "";
@@ -918,5 +988,25 @@ input.form-name__input {
 
       background-color: #dbdbdb;
     }
+  }
+
+  .review-form__impression .review-form__legend {
+    margin-right: 0;
+    margin-left: 80px;
+ }
+
+ .form-name,
+ .form-impression {
+  width: 480px;
+  margin-bottom: 3px;
+ }
+
+ .review-form__impression .form-impression__list-item {
+    margin-bottom: 52px;
+    margin-left: 80px;
+  }
+
+  .form-contacts__field--phone input {
+    padding-left: 17px;
   }
 }
