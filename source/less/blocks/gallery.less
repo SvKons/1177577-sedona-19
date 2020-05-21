@@ -4,7 +4,6 @@
   font-weight: normal;
   text-align: center;
   color: #333333;
-
   margin-bottom: 48px;
   margin-top: 15px;
   padding: 0 24px;
@@ -19,40 +18,33 @@
 .gallery__item {
   position: relative;
   margin-bottom: 40px;
-
   padding: 0 20px;
 }
 
 .gallery__item-sunset::before {
   content: "";
-
   position: absolute;
   top: -20px;
   left: 0;
   right: 0;
-
   width: auto;
   height: 1px;
-
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .gallery__item::after {
   content: "";
-
   position: absolute;
-  bottom: -20px;
+  bottom: -17px;
   left: 0;
   right: 0;
-
   width: auto;
   height: 1px;
-
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .gallery__item-title {
-  font-family: "ptsansbold";
+  font-family: "ptsansbold", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-align: left;
@@ -61,7 +53,7 @@
 }
 
 .gallery__item-title--openspaces {
-  font-family: "ptsansbold";
+  font-family: "ptsansbold", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-align: left;
@@ -70,20 +62,18 @@
 }
 
 .gallery__item-author {
-  margin: 0;
-
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
   text-align: left;
   text-transform: none;
   color: #333333;
+  margin: 0;
 }
 
 .photo__item-likes {
   background-color: transparent;
   border: none;
-
   margin-right: 10px;
   margin-top: 5px;
   padding: 0;
@@ -91,7 +81,6 @@
 
 .photo__item-icon {
   color: #ffffff;
-
   opacity: 0.3;
 }
 
@@ -156,7 +145,7 @@
   }
 
   .gallery__wrapper-text h3 {
-    font-family: "ptsansbold";
+    font-family: "ptsansbold", "Arial", sans-serif;
     letter-spacing: 0.1px;
   }
 
@@ -164,12 +153,11 @@
   .gallery__item::after {
     display: none;
   }
-  
+
   .photo__item-likes {
     position: absolute;
     right: 61px;
     bottom: 27px;
-
     margin: 0;
   }
 
@@ -225,9 +213,7 @@
     box-sizing: border-box;
     width: 100%;
     color: #ffffff;
-
     background-color: rgba(0, 0, 0, 0.3);
-
     padding: 16px 20px;
 
     .gallery__item-author {
@@ -237,11 +223,10 @@
 
   .photo__item-icon {
     fill: #ffffff;
-
     opacity: 1;
   }
 
-  .gallery__item-number{
+  .gallery__item-number {
     color: #ffffff;
     right: 22px;
     bottom: 27px;
