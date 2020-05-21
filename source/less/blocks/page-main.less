@@ -65,6 +65,10 @@
   background: url("../img/bg-white.png") 0 0 no-repeat;
 }
 
+.site-list li:active {
+  background-color: #5496bd;
+}
+
 .site-list li:hover {
   background-color: #669ec0;
 }
@@ -80,6 +84,22 @@
 
   .site-list li:hover {
     background-color: #ffffff;
+  }
+
+  .site-list a:hover {
+    color: #81b3d2;
+  }
+
+  .site-list__item--current a {
+    color: #766357;
+  }
+
+  .site-list__item--current a:hover {
+    color: #604e43;
+  }
+
+  .site-list__item--current a:active {
+    color: rgba(118, 99, 87, 0.3);
   }
 
   .page-main__title {
