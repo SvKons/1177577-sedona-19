@@ -25,7 +25,6 @@
 
 .main-nav__toggle {
   position: absolute;
-
   border: none;
 }
 
@@ -34,15 +33,12 @@
   top: 16px;
   right: 20px;
   z-index: 2;
-
   width: 23px;
   height: 22px;
-
-  background-color: transparent;
   border: none;
   cursor: pointer;
-
   background: transparent url("../img/icon-menu-blue.svg") 0 0 no-repeat;
+  background-color: transparent;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -50,15 +46,12 @@
   top: 16px;
   right: 7px;
   z-index: 2;
-
   width: 23px;
   height: 22px;
-
-  background-color: transparent;
   border: none;
   cursor: pointer;
-
   background: transparent url("../img/icon-cross-w.svg") 0 0 no-repeat;
+  background-color: transparent;
 }
 
 .site-list {
@@ -69,18 +62,6 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 -7px 7px -8px rgba(0, 0, 0, 0.4);
-}
-
-.site-list li:hover {
-  background-color: #669ec0;
-}
-
-.site-list li:active {
-  background-color: #5496bd;
-}
-
-.site-list a:active {
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-nav--closed .site-list {
@@ -127,7 +108,6 @@
     padding-left: 95px;
   }
 
-
   .site-list__item {
     flex-direction: row;
     width: 19.92%;
@@ -143,37 +123,13 @@
   }
 }
 
-  .site-list a:hover {
-    color: #81b3d2;
-  }
-
-  .site-list a:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
-
-  .site-list li:hover{
-    background-color: #ffffff;
-  }
-
-  .site-list__item--current a {
-    color: #766357;
-  }
-
-  .site-list__item--current a:hover {
-    color: #604e43;
-  }
-
-  .site-list__item--current a:active {
-    color: rgba(118, 99, 87, 0.3);
-  }
-
 @media (min-width: @desktop-width) {
   .main-nav {
     width: @desktop-width;
   }
 
   .main-nav__wrapper {
-    font-family: "ptsansbold";
+    font-family: "ptsansbold", "Arial", sans-serif;
   }
 
   .site-list__item {
